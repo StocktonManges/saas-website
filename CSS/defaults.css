@@ -4,6 +4,7 @@
   --font-color-base: #666;
   --font-color-dark: #212529;
   --font-color-light: #b0aebe;
+  --highlight-blue: #2476FD;
 
   --5px: 0.313rem;
   --10px: 0.625rem;
@@ -58,14 +59,15 @@ img {
   display: inline-block;
   font-weight: 400;
   text-align: center;
+  color: white;
   cursor: pointer;
   /* The words can't be selected. */
   user-select: none;
-  background-color: transparent;
+  background-color: var(--highlight-blue);
   /* Gives the button a clean edge. */
   border: 1px solid transparent;
-  padding: var(--5px) var(--12px);
-  border-radius: var(--20px);
+  padding: var(--5px) var(--15px);
+  border-radius: var(--30px);
   /* If a hover effect is added, this will create a smooth transition. */
   transition: ease-in-out 0.3s;
 }
