@@ -1,0 +1,42 @@
+/************************************************* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  padding: var(--15px);
+}
+
+header > div:first-child {
+  width: 150px;
+}
+
+.menu-items div a {
+  margin: 0 var(--10px)
+}
+
+.menu-items > a { margin: 0 var(--20px); }
+
+header > div:last-child {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/************************************************* .top */
+
+.top h2 {
+  font-size: 42;
+}
+
+.top .flex-container div a:last-child {
+  margin-left: var(--20px);
+}
+
+.logo-icons div {
+  width: 50px;
+}
