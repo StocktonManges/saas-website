@@ -6,7 +6,7 @@ header {
   align-items: center;
   margin: auto;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1024px;
   padding: var(--15px);
 }
 
@@ -54,7 +54,7 @@ header > div:last-child {
   position: absolute;
 }
 
-.google-icon {
+div.google-icon {
   top: 4%;
   left: 4%;
   width: 60px;
@@ -65,7 +65,7 @@ header > div:last-child {
   top: 4%;
   left: 30%;
 }
-.google-a-icon {
+div.google-a-icon {
   top: 85%;
   left: 25%;
   width: 60px;
@@ -76,8 +76,8 @@ header > div:last-child {
   left: 50%;
 }
 .asana-icon {
-  top: 52%;
-  left: 50%;
+  top: 4%;
+  left: 78%;
 }
 .calendar-icon {
   top: 92%;
@@ -90,10 +90,6 @@ header > div:last-child {
 
 .key-benefits h3 {
   font-size: 1.75rem;
-}
-
-.key-benefits .title-container p {
-  font-size: var(--16px);
 }
 
 div.flex-container.card {
@@ -132,8 +128,103 @@ div.flex-container.card {
 
 .front-perspective { padding-top: 100px; }
 
+.front-perspective .grid-container {
+  border-left: 15px solid white;
+  border-right: 15px solid white;
+  background-color: var(--bg-contrast);
+  padding: 75px 0 100px;
+  max-width: 1024px;
+  height: 25.938rem;
+}
+
+.front-perspective .flex-container { padding: 0 30px; }
+
 .front-perspective h3 {
-  font-size: 30px;
+  font-size: 29px;
   font-weight: 500;
   padding: var(--30px) 0;
+}
+
+.software-for-people {
+  background-image: url(/Assets/banners/banner_one.jpg);
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  margin-top: var(--150px);
+  height: 22.813rem;
+}
+
+/************************************* .why-front */
+
+.why-front {
+  padding-top: 50px;
+}
+
+.why-front h3 { font-size: 1.75rem; }
+
+.dot-container {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ECF2FE;
+  border-radius: 50%;
+  position: relative;
+}
+
+.right-circle {
+  margin: 0 var(--5px);
+  justify-content: center;
+  position: relative;
+}
+
+.inner-circle {
+  background-color: var(--highlight-blue);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: var(--5px);
+  width: var(--5px);
+  z-index: 1;
+}
+
+.feedback { 
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--5px);
+  width: 100%;
+  margin-left: var(--5px);
+  position: relative;
+}
+
+.feedback:after {
+  display: block;
+  content: '';
+  height: 1px;
+  background-color: #ECF2FE;
+}
+
+.why-front span {
+  position: absolute;
+  top: 75px;
+  left: 30px;
+  transform: translate(-50%);
+  text-align: center;
+  width: fit-content;
+  white-space: nowrap;
+  font-size: 16px;
+  color: var(--font-dark);
 }
