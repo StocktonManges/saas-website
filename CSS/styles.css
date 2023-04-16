@@ -95,30 +95,33 @@ div.flex-container.card {
 
 .card > div {
   width: var(--50px);
+  padding-bottom: var(--20px);
 }
 
 .card h5 {
   font-size: var(--16px);
-  padding-top: var(--15px);
 }
 
-.card span {
+.sketch {
   display: flex;
   align-items: center;
 }
 
-.card span > div {
+.sketch > div {
   width: fit-content;
   height: fit-content;
   padding: 0.125rem var(--10px);
-  margin: var(--15px) var(--10px) 0;
+  margin: 0 var(--10px);
   font-size: var(--12px);
   background-color: var(--font-light);
   color: var(--white);
   border-radius: var(--20px);
 }
 
-.card p { padding: var(--10px) 0; }
+.card p {
+  padding: var(--20px) 0;
+  margin: 0;
+}
 
 /************************************* .front-perspective */
 
@@ -284,6 +287,70 @@ div.flex-container.card {
 }
 
 .company-logos div {
-  width: 15%;
+  width: 16%;
   padding: 0 var(--20px);
+}
+
+/************************************* .pricing */
+
+.pricing { padding-top: 50px; }
+
+.pricing > .grid-container {
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.pricing .grid-container .card { padding: var(--40px); }
+
+.pricing .card h4 {
+  display: flex;
+  align-items: flex-end;
+  color: var(--font-base);
+  font-size: var(--20px);
+  font-weight: 400;
+}
+
+.pricing .card h4 span {
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 0.8;
+  color: var(--font-dark);
+}
+
+.card hr {
+  color: var(--font-base);
+  width: 100%;
+  margin-top: var(--30px);
+}
+
+.pricing .card p {
+  font-size: 1.063rem;
+  font-weight: 400;
+}
+
+.pricing .card .btn { margin: var(--50px) 0 var(--10px); }
+
+.pricing .card > span { font-weight: 400; }
+
+.features {
+  max-width: none;
+  padding: var(--20px);
+  gap: 55px;
+}
+
+.features .flex-container { justify-content: flex-start; }
+
+.features .flex-container > div {
+  width: var(--50px);
+  padding-bottom: var(--20px);
+}
+
+.features h5 {
+  font-size: var(--20px);
+  font-weight: 900;
+}
+
+.features p {
+  margin: 0;
+  padding-top: var(--20px);
+  font-size: var(--15px);
 }

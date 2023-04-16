@@ -69,7 +69,7 @@ img {
 }
 
 .btn {
-  display: inline-block;
+  display: flex;
   height: fit-content;
   width: fit-content;
   font-weight: 500;
@@ -86,6 +86,13 @@ img {
   /* If a hover effect is added, this will create a smooth transition. */
   transition: ease-in-out 0.3s;
 }
+
+.btn i {
+  font-size: var(--20px);
+  padding-right: var(--10px);
+}
+
+.btn span { font-weight: 400; }
 
 section {
   display: block;
