@@ -46,7 +46,7 @@ header > div:last-child {
   height: 350px;
 }
 
-.logo-icons div {
+.icon {
   width: 75px;
   box-shadow: 0 0 var(--10px) rgba(0, 0, 0, 0.2);
   border-radius: 50%;
@@ -87,10 +87,6 @@ div.google-a-icon {
 /************************************* .key-benefits */
 
 .key-benefits { padding-top: 100px; }
-
-.key-benefits h3 {
-  font-size: 1.75rem;
-}
 
 div.flex-container.card {
   box-shadow: 0 var(--5px) var(--15px) rgba(0, 0, 0, 0.2);
@@ -162,15 +158,13 @@ div.flex-container.card {
   padding-top: 50px;
 }
 
-.why-front h3 { font-size: 1.75rem; }
-
 .dot-container {
   display: flex;
   width: 90%;
-  max-width: 900px;
+  max-width: 850px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 15px;
+  padding: 0 15px 150px;
   box-sizing: border-box;
 }
 
@@ -227,4 +221,69 @@ div.flex-container.card {
   white-space: nowrap;
   font-size: 16px;
   color: var(--font-dark);
+}
+
+.why-front .grid-container { position: relative; }
+
+.play-icon {
+  top: 50%;
+  left: 50%;
+  text-align: right;
+  font-size: var(--20px);
+  padding: var(--30px);
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  width: var(--20px);
+  height: var(--20px);
+  box-sizing: unset;
+}
+
+/************************************* .hubspot */
+
+.hubspot { padding-top: 100px; }
+
+.dots-effect { position: relative; }
+
+.dots-effect img:first-child {
+  position: absolute;
+  width: 87%;
+  left: 13%;
+}
+
+.dots-effect img:last-child {
+  width: 47%;
+  padding-top: 24%;
+}
+
+.hubspot .grid-container .flex-container div:first-child {
+  width: 100px;
+  padding-bottom: var(--10px);
+}
+
+.hubspot p {
+  font-size: 1.375rem;
+  color: var(--font-dark);
+}
+
+.hubspot h6 {
+  font-size: var(--18px);
+  font-weight: 900;
+  padding-top: var(--40px);
+}
+
+.hubspot h4 {
+  text-align: center;
+  font-size: var(--20px);
+  color: var(--font-base);
+  padding: var(--75px) 0 var(--50px);
+}
+
+.company-logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-logos div {
+  width: 15%;
+  padding: 0 var(--20px);
 }
