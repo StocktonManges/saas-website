@@ -66,13 +66,16 @@ img {
 .link {
   color: var(--highlight-blue);
   font-weight: 600;
+  
 }
 
 .btn {
   display: flex;
+  align-items: center;
   height: fit-content;
   width: fit-content;
   font-weight: 500;
+  font-size: var(--12px);
   text-align: center;
   color: white;
   cursor: pointer;
@@ -88,7 +91,7 @@ img {
 }
 
 .btn i {
-  font-size: var(--20px);
+  font-size: var(--18px);
   padding-right: var(--10px);
 }
 
