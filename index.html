@@ -367,11 +367,11 @@
         </div>
       </div>
 
-      <div class="form">
+      <form target="_blank">
         <span>
-          Fill out the form and wee'll be in touch as soon as possible.
+          Fill out the form and we'll be in touch as soon as possible.
         </span>
-        <form target="_blank">
+        <div class="form-container">
           <input type="text" name="first-name-1" placeholder="First name" required>
           <input type="text" name="last-name-1" placeholder="Last name" required>
           <input type="text" name="first-name-2" placeholder="First name" required>
@@ -420,23 +420,23 @@
             <option value="EE">Estonia</option>
             <option value="ET">Ethiopia</option>
           </datalist>
-            <textarea 
-              name="description" 
-              id="description" 
-              cols="30" 
-              rows="10" 
-              placeholder="Tell us more about your project, needs, and timeline please...">
-            </textarea>
+          <textarea 
+            name="description" 
+            id="description"
+            placeholder="Tell us more about your project, needs, and timeline please..."
+          ></textarea>
+          <div class="subscribe">
             <input type="checkbox" name="subscribe">
             <label for="subscribe">
               Yes, I'd like to receive occasional marketing emails from
               Front. I have the right to opt out at any time.
             </label>
-            <a href="#" class="link">View privacy policy</a>
-            <a href="#" class="link">View white paper</a>
-            <button class="btn" type="submit">Get Started</button>
-          </form>
+          </div>
+          <a href="#" class="link">View privacy policy</a>
+          <a href="#" class="link">View white paper</a>
         </div>
+        <button class="btn" type="submit">Get Started</button>
+      </form>
     </div>
   </section>
   
