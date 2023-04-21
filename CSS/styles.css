@@ -150,14 +150,17 @@ div.flex-container.card {
 }
 
 .software-for-people {
-  background-image: url(/Assets/banners/banner_one.jpg);
+  
+
+  background-image: url(../Assets/banners/banner_one.jpg);
   background-repeat: no-repeat;
   background-color: var(--white);
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
-  margin-top: var(--150px);
+  margin-top: var(--75px);
   height: 22.813rem;
+  width: 100%;
 }
 
 /************************************* .why-front */
@@ -360,7 +363,7 @@ div.flex-container.card {
   font-size: var(--15px);
 }
 
-/************************************* .pricing */
+/************************************* .hire-us */
 
 .hire-us {
   background-color: #20335B;
@@ -369,8 +372,6 @@ div.flex-container.card {
 }
 
 .hire-us .flex-container { width: 80%; }
-
-.james, .christina { display: none; }
 
 .hire-us-title {
   width: 190px;
@@ -388,6 +389,115 @@ div.flex-container.card {
   padding-top: var(--10px);
 }
 
+.testimonial-container {
+  height: 11.25rem;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: fit-content;
+  width: fit-content;
+  opacity: 0;
+}
+
+/****************************** animations start */
+
+.christina {
+  animation-name: christina-testimonial;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+@keyframes christina-testimonial {
+  0% { opacity: 0; }
+  3% { opacity: 1;}
+  27% { opacity: 1;}
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.james {
+  animation-name: james-testimonial;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 7s;
+}
+
+@keyframes james-testimonial {
+  0% { opacity: 0; }
+  3% { opacity: 1;}
+  27% { opacity: 1;}
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.charlotte {
+  animation-name: charlotte-testimonial;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 14s;
+}
+
+@keyframes charlotte-testimonial {
+  0% { opacity: 0; }
+  3% { opacity: 1;}
+  27% { opacity: 1;}
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.christina-pic img {
+  animation-name: christina-pic;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+@keyframes christina-pic {
+  0% { width: 70%; }
+  3% { width: 100%;}
+  27% { width: 100%;}
+  30% { width: 70%; }
+  100% { width: 70%; }
+}
+
+.james-pic img {
+  animation-name: james-pic;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 7s;
+}
+
+@keyframes james-pic {
+  0% { width: 70%; }
+  3% { width: 100%;}
+  27% { width: 100%;}
+  30% { width: 70%; }
+  100% { width: 70%; }
+}
+
+.charlotte-pic img {
+  animation-name: christina-pic;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 14s;
+}
+
+@keyframes charlotte-pic {
+  0% { width: 70%; }
+  3% { width: 100%;}
+  27% { width: 100%;}
+  30% { width: 70%; }
+  100% { width: 70%; }
+}
+
+/****************************** animations end */
+
 .testimonial p {
   color: var(--white);
   font-style: italic;
@@ -401,23 +511,28 @@ div.flex-container.card {
 
 .profiles {
   display: flex;
-  width: 215px;
+  width: 200px;
+  height: 5.625rem;
   justify-content: space-between;
   padding-top: var(--50px);
+  align-items: center;
 }
 
 .profile {
   width: 50px;
-  clip-path: circle();
+  text-align: center;
 }
-
-/************************************* .hire-us */
+.profile img {
+  width: 70%;
+  border-radius: 50%;
+}
 
 form {
   background-color: var(--white);
   border-radius: var(--10px);
   padding: var(--30px);
   width: 92%;
+  margin: 0;
 }
 
 form > span {
@@ -478,3 +593,5 @@ input[list="budget"]::placeholder {
 }
 
 form .btn { margin: var(--40px) auto 0; }
+
+/************************************* footer */
