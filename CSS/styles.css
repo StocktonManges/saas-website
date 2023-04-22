@@ -325,9 +325,8 @@ div.flex-container.card {
 }
 
 .card hr {
-  color: var(--font-base);
-  width: 100%;
   margin-top: var(--30px);
+  background-color: var(--font-base);
 }
 
 .pricing .card p {
@@ -343,9 +342,8 @@ div.flex-container.card {
   max-width: none;
   padding: var(--20px);
   gap: 55px;
+  align-items: start;
 }
-
-.features .flex-container { justify-content: flex-start; }
 
 .features .flex-container > div {
   width: var(--50px);
@@ -372,6 +370,11 @@ div.flex-container.card {
 }
 
 .hire-us .flex-container { width: 80%; }
+
+.hire-us .grid-container > .flex-container {
+  margin: 0;
+  justify-self: left;
+}
 
 .hire-us-title {
   width: 190px;
@@ -595,3 +598,66 @@ input[list="budget"]::placeholder {
 form .btn { margin: var(--40px) auto 0; }
 
 /************************************* footer */
+
+.footer-top {
+  flex-direction: row;
+  padding: 75px 0 30px;
+  font-size: var(--12px);
+}
+
+.footer-top i { padding-right: var(--5px); }
+
+.front {
+  justify-content: flex-start;
+  max-width: max-content;
+}
+
+.front > div:first-child {
+  width: var(--100px);
+  padding-bottom: var(--10px);
+}
+
+.front address { width: max-content; }
+
+.front div span { color: var(--highlight-blue); }
+
+.helpful-links {
+  align-items: start;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.helpful-links .flex-container {
+  padding: 0 var(--15px);
+  width: max-content;
+}
+
+.helpful-links .flex-container > *,
+.front > * { margin-bottom: 0.438rem; }
+
+.helpful-links h6 {
+  font-size: var(--18px);
+  font-weight: 900;
+  padding-bottom: var(--10px);
+}
+
+.helpful-links a { color: var(--font-base); }
+
+.hiring {
+  display: flex;
+  align-items: center;
+}
+
+.hiring div {
+  margin-left: var(--5px);
+  padding: 0.063rem 0.188rem;
+  background-color: var(--highlight-blue);
+  color: var(--white);
+  font-size: var(--10px);
+  border-radius: 0.188rem;
+}
+
+footer hr {
+  height: 2px;
+  background-color: var(--light-gray);
+}
