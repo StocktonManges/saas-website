@@ -26,7 +26,10 @@
 
 /* Makes it so that the page scrolls instead of skipping when using anchor tags to 
 move to a different part of the page. */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
 
 body {
   font-family: 'Roboto', 'Open Sans', sans-serif;
@@ -48,7 +51,10 @@ element even when a border or padding is added. */
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 h2, h3, h4, h5, h6 { 
   line-height: 1.2;
@@ -146,7 +152,7 @@ section {
   justify-content: center;
   align-content: center;
   width: 100%;
-  max-width: 605px;
+  max-width: 625px;
   text-align: center;
 }
 
