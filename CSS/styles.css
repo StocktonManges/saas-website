@@ -1,17 +1,40 @@
 /************************************* header */
 
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
   margin: auto;
   width: 100%;
   max-width: 1024px;
   padding: var(--15px);
+  row-gap: var(--50px);
 }
 
 header > div:first-child {
   width: 150px;
+}
+
+[aria-controls="menuDropdown"] {
+  display: none;
+}
+
+button i {
+  width: 30px;
+  /* This makes it so you can click the button through the <i> element. */
+  pointer-events: none;
+  cursor: pointer;
+  color: var(--font-base);
+}
+
+.menu-items {
+  width: fit-content;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  margin: auto;
+  justify-items: center;
+  row-gap: var(--50px);
 }
 
 .menu-items div a {
@@ -19,13 +42,6 @@ header > div:first-child {
 }
 
 .menu-items > a { margin: 0 var(--20px); }
-
-header > div:last-child {
-  width: fit-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /************************************* .top */
 
@@ -142,7 +158,7 @@ div.flex-container.card {
   max-width: 1024px;
   column-gap: 0;
   row-gap: 420px;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 }
 
 .front-perspective .flex-container { padding: 0 30px; }
@@ -167,8 +183,8 @@ div.flex-container.card {
   background-position-y: center;
   background-size: cover;
   height: 0;
-  width: 102%;
-  padding-bottom: 71.4%;
+  width: 100%;
+  padding-bottom: 70%;
   position: absolute;
   bottom: -150px;
   right: 0;
@@ -258,13 +274,17 @@ div.flex-container.card {
   width: var(--20px);
   height: var(--20px);
   box-sizing: unset;
+  color: var(--font-dark);
 }
 
 /************************************* .hubspot */
 
 .hubspot { padding-top: 100px; }
 
-.dots-effect { position: relative; }
+.dots-effect {
+  position: relative;
+  width: 100%;
+}
 
 .dots-effect img:first-child {
   position: absolute;
@@ -352,7 +372,7 @@ div.flex-container.card {
 .features {
   max-width: none;
   padding: var(--20px);
-  gap: 55px;
+  gap: 30px;
   align-items: start;
 }
 
@@ -381,11 +401,6 @@ div.flex-container.card {
 }
 
 .hire-us .flex-container { width: 80%; }
-
-.hire-us .grid-container > .flex-container {
-  margin: 0;
-  justify-self: left;
-}
 
 .hire-us-title {
   width: 190px;
@@ -598,6 +613,8 @@ input[type="checkbox"] {
   width: var(--20px);
 }
 
+.subscribe label { font-size: 0.8125rem; }
+
 form a:last-child { text-align: left; }
 
 ::placeholder {
@@ -619,7 +636,7 @@ footer * { font-size: var(--12px); }
 
 .footer-top {
   flex-direction: row;
-  padding-top: 75px;
+  padding: 75px 15px 0;
 }
 
 .footer-top i { padding-right: var(--5px); }
@@ -678,11 +695,13 @@ footer * { font-size: var(--12px); }
 footer hr {
   height: 2px;
   background-color: var(--light-gray);
-  max-width: 1024px;
   margin: var(--30px) auto;
 }
 
-.footer-middle { flex-direction: row; }
+.footer-middle {
+  flex-direction: row;
+  padding: 0 15px;
+}
 
 .footer-middle > div:first-child {
   margin-right: auto;
@@ -699,10 +718,16 @@ footer hr {
 .social-media-icons div {
   height: var(--12px);
   width: var(--12px);
-  padding: 0.8125rem;
+  padding: 0.4375rem;
   border-radius: var(--5px);
   background-color: var(--light-gray);
   margin: 0 var(--10px);
+  box-sizing: initial;
+}
+
+.social-media-icons div:nth-child(2) {
+  color: var(--light-gray);
+  background-color: var(--font-base);
 }
 
 .footer-middle select {

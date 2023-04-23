@@ -1,0 +1,34 @@
+@media screen and (max-width: 1023px) {
+
+  [aria-controls="menuDropdown"] {
+    display: block;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  [aria-expanded="false"] ~ div.menu-items {
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ div.menu-items {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    width: 100%;
+    max-width: 375px;
+  }
+
+  [aria-expanded="true"] ~ div.menu-items > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    grid-column: 1 / 3;
+  }
+  
+  [aria-expanded="true"] ~ div.menu-items > a {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+}
