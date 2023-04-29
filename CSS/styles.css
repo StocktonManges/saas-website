@@ -7,7 +7,7 @@ header {
   margin: auto;
   width: 100%;
   max-width: 1024px;
-  padding: var(--15px);
+  padding: var(--30px);
   row-gap: var(--50px);
 }
 
@@ -151,8 +151,8 @@ div.flex-container.card {
 .front-perspective { padding-top: 100px; }
 
 .front-perspective .grid-container {
-  border-left: 15px solid var(--white);
-  border-right: 15px solid var(--white);
+  border-left: 30px solid var(--white);
+  border-right: 30px solid var(--white);
   background-color: var(--bg-contrast);
   padding: 140px 0 150px;
   max-width: 1024px;
@@ -202,7 +202,7 @@ div.flex-container.card {
   max-width: 850px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 15px 150px;
+  padding: 0 30px 150px;
   box-sizing: border-box;
 }
 
@@ -310,13 +310,15 @@ div.flex-container.card {
 .hubspot p {
   font-size: 1.375rem;
   color: var(--font-dark);
+  margin-bottom: var(--75px);
 }
 
-.name-position h6 {
+.hubspot h6 {
   font-size: var(--18px);
   font-weight: 900;
-  padding-top: var(--50px);
 }
+
+.hubspot > .flex-container { padding: 0 30px; }
 
 .hubspot h4 {
   text-align: center;
@@ -406,9 +408,18 @@ div.flex-container.card {
   margin-top: 100px;
 }
 
-.hire-us > .grid-container { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+.hire-us > .grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  row-gap: 50px;
+}
 
-.hire-us .flex-container { width: 80%; }
+.animation-container {
+  width: 80%;
+  justify-items: left;
+  gap: 30px;
+  grid-template-columns: 1fr;
+  padding: 0;
+}
 
 .hire-us-title {
   width: 190px;
@@ -427,7 +438,7 @@ div.flex-container.card {
 }
 
 .testimonial-container {
-  height: 11.25rem;
+  height: 3.5rem;
   width: 100%;
   position: relative;
 }
@@ -441,6 +452,50 @@ div.flex-container.card {
   opacity: 0;
 }
 
+.name-title-container {
+  position: relative;
+  width: 100%;
+  height: 5.875rem;
+}
+
+.name-title {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.name-title h6 {
+  font-size: var(--18px);
+  font-weight: 900;
+  color: var(--white);
+}
+
+.testimonial p {
+  color: var(--white);
+  font-style: italic;
+  font-size: 1.063rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.profiles {
+  display: flex;
+  width: 200px;
+  height: 5.625rem;
+  justify-content: space-between;
+  padding-top: var(--50px);
+  align-items: center;
+}
+
+.profile {
+  width: 50px;
+  text-align: center;
+}
+.profile img {
+  width: 70%;
+  border-radius: 50%;
+}
+
 /****************************** animations start */
 
 /* Testimonial loop */
@@ -450,9 +505,25 @@ div.flex-container.card {
   animation-duration: 21s;
   animation-iteration-count: infinite;
   animation-delay: 0s;
+
+}
+
+.name-christina {
+  animation-name: name-christina;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
 }
 
 @keyframes christina-testimonial {
+  0% { opacity: 0; }
+  3% { opacity: 1;}
+  27% { opacity: 1;}
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes name-christina {
   0% { opacity: 0; }
   3% { opacity: 1;}
   27% { opacity: 1;}
@@ -467,7 +538,22 @@ div.flex-container.card {
   animation-delay: 7s;
 }
 
+.name-james {
+  animation-name: name-james;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 7s;
+}
+
 @keyframes james-testimonial {
+  0% { opacity: 0; }
+  3% { opacity: 1;}
+  27% { opacity: 1;}
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes name-james {
   0% { opacity: 0; }
   3% { opacity: 1;}
   27% { opacity: 1;}
@@ -482,7 +568,22 @@ div.flex-container.card {
   animation-delay: 14s;
 }
 
+.name-charlotte {
+  animation-name: name-charlotte;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 14s;
+}
+
 @keyframes charlotte-testimonial {
+  0% { opacity: 0; }
+  3% { opacity: 1;}
+  27% { opacity: 1;}
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes name-charlotte {
   0% { opacity: 0; }
   3% { opacity: 1;}
   27% { opacity: 1;}
@@ -539,40 +640,11 @@ div.flex-container.card {
 
 /****************************** animations end */
 
-.testimonial p {
-  color: var(--white);
-  font-style: italic;
-  font-size: 1.063rem;
-  font-weight: 400;
-  margin: 0;
-  padding-top: var(--30px);
-}
-
-.testimonial h6 { color: var(--white); }
-
-.profiles {
-  display: flex;
-  width: 200px;
-  height: 5.625rem;
-  justify-content: space-between;
-  padding-top: var(--50px);
-  align-items: center;
-}
-
-.profile {
-  width: 50px;
-  text-align: center;
-}
-.profile img {
-  width: 70%;
-  border-radius: 50%;
-}
-
 form {
   background-color: var(--white);
   border-radius: var(--10px);
   padding: var(--30px);
-  width: 92%;
+  width: 100%;
   margin: 0;
 }
 
@@ -644,7 +716,7 @@ footer * { font-size: var(--12px); }
 
 .footer-top {
   flex-direction: row;
-  padding: 75px 15px 0;
+  padding: 75px 30px 0;
 }
 
 .footer-top i { padding-right: var(--5px); }
@@ -708,7 +780,7 @@ footer hr {
 
 .footer-middle {
   flex-direction: row;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 
 .footer-middle > div:first-child {
@@ -746,6 +818,6 @@ footer hr {
   border-radius: var(--5px);
 }
 
-.footer-bottom.title-container { padding: 25px 15px; }
+.footer-bottom.title-container { padding: 25px 30px; }
 
 .footer-bottom p { font-size: var(--12px); }
