@@ -70,7 +70,7 @@
 
   .dots-effect { width: 65%; }
 
-  .hubspot .flex-container {
+  .hubspot .grid-container .flex-container {
     text-align: center;
     align-items: center;
     width: 90%;
@@ -86,4 +86,30 @@
   }
 
   .features { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+  /************************************* .hire-us */
+
+  .animation-container {
+    row-gap: 0;
+    column-gap: 75px;
+    grid-template-columns: 1.5fr 1fr;
+    width: 100%;
+  }
+
+  .hire-us-title { width: 100%; }
+
+  .testimonial-container {
+    order: 3;
+    align-self: flex-start;
+  }
+
+  .testimonial p { padding-top: var(--30px); }
+
+  .name-title { bottom: 25%; }
+
+  .profiles {
+    padding-bottom: var(--50px);
+    padding-top: 0;
+    order: 4;
+  }
 }
