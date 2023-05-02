@@ -59,7 +59,9 @@
 
   /************************************* .front-perspective */
 
-  .front-perspective .grid-container { padding: 0 0 150px; }
+  .front-perspective > .grid-container { grid-template-columns: 1fr; }
+
+  .front-perspective .flex-container { padding: 0 30px; }
 
   .front-perspective .flex-container {
     text-align: center;
@@ -111,5 +113,79 @@
     padding-bottom: var(--50px);
     padding-top: 0;
     order: 4;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  /************************************* .why-front */
+
+  .dot-container {
+    flex-direction: column;
+    padding: 0 30px 50px;
+    height: 295px;
+    justify-content: space-between;
+  }
+
+  .feedback {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+  
+  .feedback:after { display: none; }
+
+  .why-front span {
+    top: 50%;
+    left: 100px;
+    transform: translate(0, -50%);
+    text-align: left;
+  }
+
+  .right-circle { margin-left: 0; }
+
+  .play-icon { padding: 30px; }
+
+  /************************************* .hubspot */
+
+  .hubspot > .grid-container { grid-template-columns: 1fr; }
+
+  .dots-effect { width: 100%; }
+
+  .company-logos {
+    flex-direction: column;
+    height: 240px;
+  }
+
+  .company-logos div {
+    width: 8.75rem;
+    align-self: center;
+  }
+
+  /************************************* .hire-us */
+
+  .hire-us .grid-container { grid-template-columns: 1fr; }
+
+  .animation-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    row-gap: 30px;
+  }
+
+  .testimonial-container { order: 2; }
+
+  .testimonial p { padding-top: 0; }
+
+  .name-title-container { order: 3; }
+
+  .name-title {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .profiles {
+    height: var(--50px);
+    padding-bottom: 0;
   }
 }
