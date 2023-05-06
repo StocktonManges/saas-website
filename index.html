@@ -24,6 +24,7 @@
     </div>
     <button class="btn-menu" aria-expanded="false" aria-controls="menuDropdown">
       <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-xmark"></i>
     </button>
     <div class="menu-items">
       <div>
@@ -439,8 +440,10 @@
               Front. I have the right to opt out at any time.
             </label>
           </div>
-          <a href="#" class="link">View privacy policy</a>
-          <a href="#" class="link">View white paper</a>
+          <div class="policies">
+            <a href="#" class="link">View privacy policy</a>
+            <a href="#" class="link">View white paper</a>
+          </div>          
         </div>
         <button class="btn" type="submit">Get Started</button>
       </form>
@@ -450,7 +453,7 @@
 <!-------------------------------------------- footer -->
 
   <footer>
-    <div class="footer-top flex-container">
+    <div class="footer-top">
       <div class="front flex-container">
         <div>
           <img src="./Assets/project_logo/logo.svg" alt="Front Logo">
@@ -534,6 +537,7 @@
     </div>
     <div class="footer-bottom title-container">
       <p>
+        <i class="fa-regular fa-copyright"></i> 
         Front. 2022 Responsive designs. All rights reserved.
       </p>
       <p>
@@ -554,6 +558,13 @@
     }
   
     menuButton.addEventListener('click', toggleMenu);
+
+    // Toggles the two .btn-menu icons.
+    var btnMenu = document.querySelector('.btn-menu');
+
+    btnMenu.addEventListener('click', function() {
+      btnMenu.classList.toggle('clicked');
+    });
   </script>
 </body>
 </html>

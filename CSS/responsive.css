@@ -10,6 +10,22 @@
     cursor: pointer;
   }
 
+  .btn-menu i.fa-xmark {
+    display: none;
+  }
+
+  .btn-menu.clicked i.fa-bars {
+    display: none;
+  }
+
+  .btn-menu.clicked i.fa-xmark {
+    display: block;
+  }
+
+  .btn-menu.clicked i.fa-bars {
+    display: none; /* Hide the first i element when the second i element is displayed */
+  }
+
   [aria-expanded="false"] ~ div.menu-items {
     display: none;
   }
@@ -32,6 +48,7 @@
   [aria-expanded="true"] ~ div.menu-items > a {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
+    margin-left: 0;
   }
 
   /************************************* .top */
@@ -55,7 +72,7 @@
 
   /************************************* .key-benefits */
 
-  .key-benefits .grid-container { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .key-benefits .grid-container { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
   /************************************* .front-perspective */
 
@@ -87,7 +104,7 @@
     align-items: center;
   }
 
-  .features { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .features { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
   /************************************* .hire-us */
 
@@ -117,6 +134,13 @@
 }
 
 @media screen and (max-width: 767px) {
+
+  [aria-expanded="true"] ~ div.menu-items { row-gap: var(--15px); }
+  
+  [aria-expanded="true"] ~ div.menu-items > div {
+    row-gap: var(--15px);
+    flex-direction: column;
+  }
 
   /************************************* .why-front */
 
@@ -188,4 +212,38 @@
     height: var(--50px);
     padding-bottom: 0;
   }
+
+  .form-container { grid-template-columns: 1fr; }
+
+  textarea { grid-column: 1 / 2; }
+
+  .subscribe { grid-column: 1 / 2; }
+
+  .policies {
+    grid-column: 1 / 2;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /************************************* footer */
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .front {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .helpful-links { grid-template-columns: 1fr; }
+
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--20px);
+  }
+
+  .footer-middle > div:first-child { margin-right: 0; }
 }
