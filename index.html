@@ -18,24 +18,26 @@
 </head>
 <body>
 
-  <header>
-    <div>
-      <img src="./Assets/project_logo/logo.svg" alt="Front Logo">
-    </div>
-    <button class="btn-menu" aria-expanded="false" aria-controls="menuDropdown">
-      <i class="fa-solid fa-bars"></i>
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <div class="menu-items">
+  <header id="navBar">
+    <nav>
       <div>
-        <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">Learn</a>
-        <a href="#">Pricing</a>
-        <a href="#">Hire Us</a>
+        <img src="./Assets/project_logo/logo.svg" alt="Front Logo">
       </div>
-      <a href="#" class="btn">Buy Now</a>
-    </div>
+      <button class="btn-menu" aria-expanded="false" aria-controls="menuDropdown">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="menu-items">
+        <div>
+          <a href="#">Home</a>
+          <a href="#">Features</a>
+          <a href="#">Learn</a>
+          <a href="#">Pricing</a>
+          <a href="#">Hire Us</a>
+        </div>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </nav>
   </header>
 
 <!-------------------------------------------- .top -->
@@ -565,6 +567,16 @@
     btnMenu.addEventListener('click', function() {
       btnMenu.classList.toggle('clicked');
     });
+
+    // Makes the header sticky after scrolling 200px.
+    const nav = document.getElementById("navBar");
+    window.onscroll = function () {
+      if (window.pageYOffset > 400) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    }
   </script>
 </body>
 </html>
